@@ -1,7 +1,7 @@
 # AspNet.DockerImage.Example
 An example to create a Docker Image and then run it on a Docker Container.
 
-To create a Docker image build the project:
+First build the project:
 
 ``` dotnet build -c Release```
 
