@@ -48,3 +48,12 @@ If you open the browser and then go to the address:
 http://localhost:5000
 ```
 you can see the app that is running on the container image.
+
+## Clear Docker images
+
+Finally to clear the Docker images, on terminal, run the following command:
+
+```
+docker rmi aspnettest
+```
+
