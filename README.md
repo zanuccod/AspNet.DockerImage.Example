@@ -1,7 +1,16 @@
 # AspNet.DockerImage.Example
 An example to create a Docker Image and then run it on a Docker Container.
 
-To create a Docker image build the project:
+## Pre requisites
+Docker installed on local machine. 
+
+On MacOS you can use homebrew and run the following command to install it:
+
+``` brew install  homebrew/cask/docker ```
+
+## Build and Run a Docker image
+
+First build the project:
 
 ``` dotnet build -c Release```
 
@@ -12,7 +21,12 @@ Publish the project:
 Copy the Dokerfile to the publish folder:
 
 ```
-cp Dockerfile AspNet.DockerImage.Example/bin/Release/net5.0/
+cp DockerFile AspNet.DockerImage.Example/bin/Release/net5.0/publish/
+```
+Go into the publish folder:
+
+```
+cd AspNet.DockerImage.Example/bin/Release/net5.0/publish/
 ```
 
 Build the Docker image:
@@ -26,3 +40,11 @@ Run the docker image on a Docker Container:
 ```
 docker run -d -p 5000:5000 aspnettest
 ```
+
+## Test
+If you open the browser and then go to the address:
+
+```
+http://localhost:5000
+```
+you can see the app that is running on the container image.
